@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Verify your credentials</title>
+    <title>I-VOTING</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Ensure use of most common Unicode characters -->
     <meta charset="utf-8">
@@ -19,10 +19,11 @@
 
              <div class="column col-4 text-center">
                 <div class="card">
-                    <h4>Insert your security key or use your fingerprint sensor</h4>
-                    <div class="card-body">
+                    <h4>Login</h4>
+                    <div class="card-body"><p align="center">
                         <form id="login" onsubmit="return false">
-                            <button class="btn btn-primary" action="submit">Verify credentials</button>
+                            <button class="btn btn-primary" action="submit">verify Credentials</button>
+                            </p>
                         </form>
                     </div><!-- .card-body --> 
                 </div><!-- .card -->
@@ -37,8 +38,8 @@
         document.getElementById('register').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            let username    = this.username.value;
-            let displayName = this.displayName.value;
+            let username    = 'null';
+            let displayName = 'null;
 
             startUsernamelessEnrolment({username, displayName})
                 .then((serverResponse) => {
