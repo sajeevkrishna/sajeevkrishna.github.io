@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Passwordless Authentication Examples</title>
+    <title>I-VOTING</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Ensure use of most common Unicode characters -->
     <meta charset="utf-8">
@@ -17,9 +17,9 @@
             <div class="column col-2 text-center">
             </div>
 
-            <!--<div class="column col-4 text-center">
+            <div class="column col-4 text-center">
                 <div class="card">
-                    <h4>Register</h4>
+                    <h4>Register security-key</h4>
                     <div class="card-body">
                         <form id="register" onsubmit="return false">
                             <input type="text" name="username" placeholder="Aadhar number"><br>
@@ -28,14 +28,14 @@
                         </form>
                     </div>
                 </div>
-            </div>-->
+            </div>
 
              <div class="column col-4 text-center">
                 <div class="card">
-                    <h4>Login</h4>
+                    <h4>Verify Crendentials</h4>
                     <div class="card-body">
                         <form id="login" onsubmit="return false">
-                            <button class="btn btn-primary" action="submit">Login</button>
+                            <button class="btn btn-primary" action="submit">Verify Credentials</button>
                         </form>
                     </div><!-- .card-body --> 
                 </div><!-- .card -->
@@ -50,8 +50,8 @@
         document.getElementById('register').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            let username    = 'null';
-            let displayName = 'null';
+            let username    = this.username.value;
+            let displayName = this.displayName.value;
 
             startUsernamelessEnrolment({username, displayName})
                 .then((serverResponse) => {
